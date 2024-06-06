@@ -13,6 +13,7 @@ func SetupRouter() *mux.Router {
 	router.HandleFunc("/employees", handlers.ListEmployeesHandler).Methods("GET")
 	router.HandleFunc("/employees/{id}", handlers.GetEmployeeHandler).Methods("GET")
 	router.HandleFunc("/employees/{id}", handlers.UpdateEmployeeHandler).Methods("PUT")
+	router.HandleFunc("/employees/{id}", handlers.DeleteEmployeeHandler).Methods("DELETE")
 
 	return router
 }

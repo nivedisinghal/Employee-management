@@ -61,7 +61,7 @@ func DeleteEmployee(id int) error {
 	defer mu.Unlock()
 
 	if _, exists := employees[id]; !exists {
-		return errors.New("employee not found")
+		return errors.New("Employee not found")
 	}
 	delete(employees, id)
 	return nil

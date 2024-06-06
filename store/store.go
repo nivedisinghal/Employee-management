@@ -45,7 +45,7 @@ func UpdateEmployee(id int, name, position string, salary float64) (models.Emplo
 
 	employee, exists := employees[id]
 	if !exists {
-		return models.Employee{}, errors.New("employee not found")
+		return models.Employee{}, errors.New("Employee not found")
 	}
 
 	employee.Name = name
